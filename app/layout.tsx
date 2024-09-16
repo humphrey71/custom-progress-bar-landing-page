@@ -1,17 +1,15 @@
-import BaiDuAnalytics from "@/app/BaiDuAnalytics";
-import GoogleAnalytics from "@/app/GoogleAnalytics";
-import { TailwindIndicator } from "@/components/TailwindIndicator";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
-import { siteConfig } from "@/config/site";
-import { defaultLocale } from "@/lib/i18n";
-import { cn } from "@/lib/utils";
-import "@/styles/globals.css";
-import "@/styles/loading.css";
-import { Analytics } from "@vercel/analytics/react";
-import { Viewport } from "next";
-import { Inter as FontSans } from "next/font/google";
+import BaiDuAnalytics from "@/app/BaiDuAnalytics"
+import GoogleAnalytics from "@/app/GoogleAnalytics"
+import { TailwindIndicator } from "@/components/TailwindIndicator"
+import { ThemeProvider } from "@/components/ThemeProvider"
+import { siteConfig } from "@/config/site"
+import { defaultLocale } from "@/lib/i18n"
+import { cn } from "@/lib/utils"
+import "@/styles/globals.css"
+import "@/styles/loading.css"
+import { Analytics } from "@vercel/analytics/react"
+import { Viewport } from "next"
+import { Inter as FontSans } from "next/font/google"
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -19,15 +17,8 @@ export const fontSans = FontSans({
 });
 
 export const metadata = {
-  title: siteConfig.name,
-  description: siteConfig.description,
-  keywords: siteConfig.keywords,
-  authors: siteConfig.authors,
-  creator: siteConfig.creator,
-  icons: siteConfig.icons,
-  metadataBase: siteConfig.metadataBase,
-  openGraph: siteConfig.openGraph,
-  twitter: siteConfig.twitter,
+  title: "Custom Progress Bar",
+  description: "Custom Progress Bar is a browser extension that lets you personalize the look of YouTube's video progress bar. Make your viewing experience truly yours!",
 };
 export const viewport: Viewport = {
   themeColor: siteConfig.themeColors,
@@ -54,9 +45,7 @@ export default async function RootLayout({
           defaultTheme={siteConfig.nextThemeColor}
           enableSystem
         >
-          <Header />
-          <main className="flex flex-col items-center py-6">{children}</main>
-          <Footer />
+          <main className="flex flex-col items-center">{children}</main>
           <Analytics />
           <TailwindIndicator />
         </ThemeProvider>
