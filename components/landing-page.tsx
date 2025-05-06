@@ -181,7 +181,6 @@ export function LandingPageComponent() {
           <p className="mt-2">Not affiliated with YouTube.</p>
         </div>
         <div className="mt-8">
-          <h2 className="text-2xl font-bold text-white mb-4">Friends</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {friends.map((friend, index) => (
               <a key={index} href={friend.href} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
