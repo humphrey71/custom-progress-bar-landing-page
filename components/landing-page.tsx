@@ -8,6 +8,41 @@ import Link from "next/link"
 
 
 export function LandingPageComponent() {
+
+  const friends = [
+    {
+      href: "https://aidollgenerator.org/",
+      text: "AI Doll Generator"
+    },
+    {
+      href: "https://www.infinitepalettes.com/",
+      text: "Infinite Palettes"
+    },
+    {
+      href: "https://qwen3.app",
+      text: "Qwen3"
+    },
+    {
+      href: "https://horseracetests.com/",
+      text: "Horse Race Tests"
+    },
+    {
+      href: "https://retolam.org/",
+      text: "Retolam"
+    },
+    {
+      href: "https://baseballbros.online/",
+      text: "Baseball Bros"
+    },
+    {
+      href: "https://agameaboutdiggingahole.net/",
+      text: "A Game About Digging a Hole"
+    },
+    {
+      href: "https://italian-brainrot.art/",
+      text: "Italian Brainrot"
+    }
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-white">
       <header className="container mx-auto px-4 py-6">
@@ -144,6 +179,15 @@ export function LandingPageComponent() {
         <div className="container mx-auto px-4 text-center">
           <p>&copy; 2024 Custom Progress Bar. All rights reserved.</p>
           <p className="mt-2">Not affiliated with YouTube.</p>
+        </div>
+        <div className="mt-8">
+          <div className="flex flex-wrap justify-center gap-4">
+            {friends.map((friend, index) => (
+              <a key={index} href={friend.href} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
+                {friend.text}
+              </a>
+            ))}
+          </div>
         </div>
       </footer>
     </div>
