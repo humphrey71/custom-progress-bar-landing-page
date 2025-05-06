@@ -183,7 +183,7 @@ export function LandingPageComponent() {
         <div className="mt-8">
           <div className="flex flex-wrap justify-center gap-4">
             {friends.map((friend, index) => (
-              <a key={index} href={friend.href} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
+              <a key={index} href={friend.href} target="_blank" className="text-white hover:text-gray-300">
                 {friend.text}
               </a>
             ))}
