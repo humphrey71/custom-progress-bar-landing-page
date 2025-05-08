@@ -41,6 +41,10 @@ export function LandingPageComponent() {
     {
       href: "https://italian-brainrot.art/",
       text: "Italian Brainrot"
+    },
+    {
+      href: "https://internetroadtrip.com/",
+      text: "Internet Roadtrip"
     }
   ]
   return (
