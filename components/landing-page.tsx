@@ -45,6 +45,14 @@ export function LandingPageComponent() {
     {
       href: "https://internetroadtrip.com/",
       text: "Internet Roadtrip"
+    },
+    {
+      "text": "WolfCut.Art",
+      "href": "https://wolfcut.art/"
+    },
+    {
+      "text": "Sitemap.One",
+      "href": "https://sitemap.one/"
     }
   ]
   return (
